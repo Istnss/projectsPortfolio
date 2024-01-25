@@ -1,3 +1,4 @@
+/*Page about me - .techstack */
 document.addEventListener('DOMContentLoaded', function () {
     var showMoreContainer = document.querySelector('.showMore');
 
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+/*Slide */
 var currentSlide = 0;
 var slides = document.querySelectorAll('.carousel-projects .slide img');
 
@@ -47,6 +49,7 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
+/*Btn prev n next */
 document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
 
@@ -59,5 +62,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     nextButton.addEventListener('click', function () {
         nextSlide();
+    });
+});
+
+/*Dark Mode*/ 
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtém a referência para o botão de alternância do modo noturno
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    // Obtém a referência para o elemento <body> do documento
+    var body = document.body;
+
+    // Verifica se há uma preferência de modo noturno armazenada no localStorage
+    var isDarkModeEnabled = localStorage.getItem('darkModeEnabled');
+
+    // Se houver uma preferência de modo noturno armazenada, aplique-a
+    if (isDarkModeEnabled === 'true') {
+        body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
+        darkModeToggle.checked = true; // Marca o botão de alternância
+    }
+
+    // Adiciona um ouvinte de evento ao botão de alternância
+    darkModeToggle.addEventListener('change', function () {
+        // Atualiza a preferência no localStorage com base no estado do botão de alternância
+        localStorage.setItem('darkModeEnabled', darkModeToggle.checked);
+
+        // Atualiza a classe 'darkmode' no corpo conforme necessário
+        if (darkModeToggle.checked) {
+            body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
+        } else {
+            body.classList.remove('darkmode'); // Remove a classe 'darkmode' do corpo
+        }
     });
 });
