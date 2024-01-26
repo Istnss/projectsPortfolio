@@ -30,7 +30,6 @@ body.darkmode .button-about:hover
 body.darkmode span{
     color: #965aaa;
 }
-
 header{
     background-color: #c6c6f3;
 }
@@ -610,7 +609,7 @@ span{
     
 }
 .btn-project{
-    background: #9696bd;
+    background: #9c9cd8;
     color: #292936;
     padding: 8px 50px;
     font-size: 1em;
@@ -621,4 +620,16 @@ span{
 .btn-project:hover{
     background: #541968;
     color: #ececf7;
+}
+.description-project{
+    background: #9c9cd8;
+    color: #2c0d36;
+    padding: 10px 90px;
+    margin-left: 1em;
+    visibility: hidden;
+    transition: visibility 0.3s;
+}
+
+.project-page:hover .description-project{
+    visibility: visible;
 }

@@ -95,3 +95,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+/*Pagina projetos */
+var elementDescription = document.querySelectorAll('.project-page');
+
+elementDescription.forEach(function(project){
+    project.addEventListener('mouseover', function(){
+        project.querySelector('description').computedStyleMap.visibility = 'visible';
+    });
+    project.addEventListener('mouseout', function(){
+        project.querySelector('description').computedStyleMap.visibility = 'hidden';
+    });
+});
