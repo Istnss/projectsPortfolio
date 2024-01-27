@@ -28,7 +28,7 @@ body.darkmode .button-about:hover
     color: #292936;
 }
 body.darkmode span{
-    color: #965aaa;
+    color: #cab5d1;
 }
 header{
     background-color: #c6c6f3;
@@ -320,6 +320,44 @@ span{
     width: 100%;
     margin-right: 0;
 }
+.project-page{
+    margin: 1em;
+    width: 100%;
+    height: 45vh    ;
+}
+.img-project-page{
+    display: block;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    height: auto;
+    
+}
+.btn-project{
+    background: #9c9cd8;
+    color: #292936;
+    padding: 8px 50px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    margin-top: 0.5em;
+}
+.btn-project:hover{
+    background: #541968;
+    color: #ececf7;
+}
+.description-project{
+    background: #9c9cd8;
+    color: #2c0d36;
+    padding: 10px 90px;
+    margin-left: 1em;
+    visibility: hidden;
+    transition: visibility 0.3s;
+}
+
+.project-page:hover .description-project{
+    visibility: visible;
+}
 #copyright{
     background-color: #263138;
     color: #fff;
@@ -332,6 +370,7 @@ span{
     color: #c6c6f3;
 }
 @media(min-width: 2102px){
+    
     #first-column h1{
         font-size: 7em;
     }
@@ -367,7 +406,6 @@ span{
     }
 }
 @media(max-width: 1440px){
-
     .image{
         max-width: 5em;
     }
@@ -550,9 +588,7 @@ span{
         border-radius: 50%;
         object-fit:cover ;
     }
-    #gallery-projects{
-        display: none;
-    }
+    
 }
 @media(max-width:400px){
     .main-container{
@@ -591,45 +627,4 @@ span{
         margin-bottom: 1em;
     }
     
-}
-
-
-.project-page{
-    /*border: 2px solid #541968;*/
-    margin: 1em;
-    width: 100%;
-    height: 45vh    ;
-}
-.img-project-page{
-    display: block;
-    padding: 0;
-    margin: 0;
-    max-width: 10px;
-    height: auto;
-    
-}
-.btn-project{
-    background: #9c9cd8;
-    color: #292936;
-    padding: 8px 50px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    margin-top: 0.5em;
-}
-.btn-project:hover{
-    background: #541968;
-    color: #ececf7;
-}
-.description-project{
-    background: #9c9cd8;
-    color: #2c0d36;
-    padding: 10px 90px;
-    margin-left: 1em;
-    visibility: hidden;
-    transition: visibility 0.3s;
-}
-
-.project-page:hover .description-project{
-    visibility: visible;
 }

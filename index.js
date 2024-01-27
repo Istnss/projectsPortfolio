@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+    
+   
 
 /*Pagina projetos */
 var elementDescription = document.querySelectorAll('.project-page');
