@@ -45,8 +45,10 @@ header{
     text-transform: none;
     font-weight: 800;
 }
-.buttonDarkMode{
+.buttonDarkMode ul{
     list-style: none;
+    margin-right: 1em;
+    margin-top: 1em;
 }
 input[type="checkbox"]{
     display: none;
