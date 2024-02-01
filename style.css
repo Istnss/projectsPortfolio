@@ -17,7 +17,7 @@ body.darkmode .techtitle a,
 body.darkmode #button-download,
 body.darkmode .button-about
 {
-    background: #541968;
+    background: #8e29af;
 }
 body.darkmode .button:hover, 
 body.darkmode .techtitle a:hover, 
@@ -28,10 +28,13 @@ body.darkmode .button-about:hover
     color: #292936;
 }
 body.darkmode span{
-    color: #cab5d1;
+    color: #fdf5ff;
 }
 header{
     background-color: #c6c6f3;
+}
+.texthome{
+    font-size: 0.8em;
 }
 .navbar-nav a{
     color: #292936 ;
@@ -201,7 +204,6 @@ span{
     display: block;
     padding: 1em;
 }
-
 .bar {
     width: 100%;
     height: 20px;
@@ -210,22 +212,17 @@ span{
 .line {
     height: 20px;
 }
-  
-.line[data-width="95"] {
+.line[data-width="80"] {
     background-color:#541968 ;
-    width: 90%;
+    width: 80%;
 }
-.line[data-width="90"] {
+.line[data-width="75"] {
     background-color:#d554f5 ;
-    width: 90%;
+    width: 75%;
 }
 .line[data-width="45"] {
     background-color:#541968 ;
     width: 45%;
-}
-.line[data-width="85"] {
-    background-color:#541968 ;
-    width: 85%;
 } 
 .line[data-width="25"] {
     width: 25%;
@@ -323,9 +320,11 @@ span{
     margin-right: 0;
 }
 .project-page{
-    margin: 1em;
+    margin: 2.5em;
+    padding-top: 2em;
+    padding-bottom: 22rem;
     width: 100%;
-    height: 45vh    ;
+    height: 45vh;
 }
 .img-project-page{
     display: block;
@@ -333,7 +332,6 @@ span{
     margin: 0;
     max-width: 100%;
     height: auto;
-    
 }
 .btn-project{
     background: #9c9cd8;
@@ -349,14 +347,15 @@ span{
     color: #ececf7;
 }
 .description-project{
+    display: inline;
     background: #9c9cd8;
     color: #2c0d36;
     padding: 10px 90px;
-    margin-left: 1em;
+    margin-left: 0.5em;
+    margin-top: 2em;
     visibility: hidden;
     transition: visibility 0.3s;
 }
-
 .project-page:hover .description-project{
     visibility: visible;
 }
@@ -366,8 +365,7 @@ span{
     padding: 1.5em;
     font-size: 1.1em;
     text-align: center;
-    }
-    
+    } 
 #copyright a{
     color: #c6c6f3;
 }
@@ -437,7 +435,6 @@ span{
     }
 }
 @media(max-width: 1024px){
-    
     .image{
         max-width: 3em;
     }
@@ -460,12 +457,17 @@ span{
         padding: 6px 10px;
         font-size: 0.8em;
     }
+    .tagTech.ativa{
+        display: none;
+    }
     .techtitle a{
         margin-left: 2em;
         font-size: 1em;
         padding: 6px 10px;
     }
-    
+    hr{
+        display: none;
+    } 
 }
 @media(max-width: 780px){
     .image{
@@ -473,9 +475,6 @@ span{
     }
     .navbar-nav a{
         font-size: 0.9em;
-    }
-    .texthome{
-        display: none;
     }
     #first-column h1{
         font-size: 3.5em;
@@ -590,7 +589,9 @@ span{
         border-radius: 50%;
         object-fit:cover ;
     }
-    
+    #gallery-projects{
+        display: none;
+    }
 }
 @media(max-width:400px){
     .main-container{

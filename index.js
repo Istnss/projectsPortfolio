@@ -66,6 +66,26 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /*Dark Mode*/ 
+function adjustElementsForDarkMode(isDarkMode) {
+    // Array de objetos contendo os IDs dos elementos e as respectivas imagens para o modo claro e escuro
+    var elements = [
+        { id: "iconNightLinkedin", lightSrc: "./img/linkedinLight.png", darkSrc: "./img/linkedinDark.svg" },
+        { id: "iconNightGithub", lightSrc: "./img/githubLight.png", darkSrc: "./img/githubDark.png" },
+        { id: "imgCat", lightSrc: "./img/iconHome.png", darkSrc: "img/catHome.gif" },
+        { id: "nightmode", lightSrc: "./img/iconlamp.png", darkSrc: "./img/iconmoon.svg" },
+        { id: "iconNightInstagram", lightSrc:  "./img/iconInstagramLight.png", darkSrc:"img/icon-instagram.svg" }
+        // Adicione mais objetos conforme necessário
+    ];
+
+    elements.forEach(function (element) {
+        var imgElement = document.getElementById(element.id);
+
+        if (imgElement) {
+            imgElement.src = isDarkMode ? element.lightSrc : element.darkSrc;
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // Obtém a referência para o botão de alternância do modo noturno
     var darkModeToggle = document.getElementById('dark-mode-toggle');
@@ -80,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isDarkModeEnabled === 'true') {
         body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
         darkModeToggle.checked = true; // Marca o botão de alternância
+        adjustElementsForDarkMode(true);
     }
 
     // Adiciona um ouvinte de evento ao botão de alternância
@@ -90,11 +111,23 @@ document.addEventListener('DOMContentLoaded', function () {
         // Atualiza a classe 'darkmode' no corpo conforme necessário
         if (darkModeToggle.checked) {
             body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
+            adjustElementsForDarkMode(true);
         } else {
             body.classList.remove('darkmode'); // Remove a classe 'darkmode' do corpo
+            adjustElementsForDarkMode(false);
         }
     });
 });
+
+/* Botao Download*/
+function downloadResume(){
+    var downloadLink = document.createElement('a');
+    downloadLink.href = "http://drive.usercontent.google.com/uc?id=17mP-AjRpy0-lkEdJIbIgTmCb5SsXn5Kt&export=downloadLink";
+    downloadLink.download = "resume_Isabela";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
     
    
 
@@ -109,3 +142,4 @@ elementDescription.forEach(function(project){
         project.querySelector('description').computedStyleMap.visibility = 'hidden';
     });
 });
+
