@@ -16,7 +16,7 @@ Bem-vindo ao meu portfólio de desenvolvimento Front End! Este repositório cont
 
 3. **Contato:**
    - E-mail: owisa@outlook.com
-   - LinkedIn: ([link-para-o-linkedin](https://www.linkedin.com/in/isa-bela/))
+   - LinkedIn: [link-para-o-linkedin](https://www.linkedin.com/in/isa-bela/)
    - Portfólio [Portfólio Online](https://portfolio-istnss.vercel.app/)
 
 4. **Atualizações:**
