@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <div class="image">
                     <a class="navbar-brand" href="index.html">
-                        <img src="img/catHome.gif" alt="Imagem de um gato" loading="lazy" class="img-fluid" height="auto" id="imgCat">
+                        <img src="img/catHome.gif" alt="Imagem de um gato" loading="lazy" class="img-fluid">
                     <span class="texthome"> Portfólio | Isabela</span></a>
                 </div>
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,10 +32,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about-me.html">About me / Contact</a>
-                        </li>                 
+                        </li>                
                     </ul>
                     <div class="buttonDarkMode">
                         <ul>
@@ -53,12 +50,11 @@
         <div class="container main-container">              
             <div class="row justify-content-evenly">
               <div class="col" id="first-column">
-                <h1>Front-end<br> Developer<span>.</span></h1><br><br>
+                <h1>Full Stack<br> Developer<span>.</span></h1><br><br>
                 <h2>Hello<span>,</span> I'm Isabela<span>.</span></h2><br><br>
                 <div class="contact-container">
                     <a class="button" href="mailto:owisa@outlook.com">Send E-mail</a>
-                    <a href="http://github.com/istnss" target="_blank" class="img-alt"><img src="./img/githubDark.png" class="img-fluid links"  id="iconNightGithub" alt="ícone Github"></a>
-                    <a href="http://linkedin.com/in/isa-bela" target="_blank"><img src="/projectsPortfolio/img/linkedinDark.svg" class="img-fluid links" id="iconNightLinkedin" alt="ícone Linkedin"></a>        
+                    <a class="button" href="projects.html">Projects</a>
                 </div>
                </div>
               <div class="col">
@@ -66,16 +62,125 @@
               </div>
             </div>
           </div>
-        <section class="tech">
-            <div class="techstack">
-                <a href="about-me.html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="img-fluid" alt="Icone Html"></a>
-                <a href="about-me.html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="img-fluid" alt="Icone Css"></a>
-                <a href="about-me.html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" class="img-fluid"  alt="Icone javascript"></a>
-                <a href="about-me.html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="img-fluid" alt="Icone bootstrap"></a>
-                <a href="about-me.html"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="img-fluid" alt="Icone bootstrap"></a>
+          <hr>
+          <section>
+            <div class="container text-center">
+                <div class="row align-items-start">
+                    <div class="about-me">
+                        <div class="col">
+                            <div class="p-about">
+                                <p>I'm taking my first steps in technology and I'm excited about the new knowledge I'm acquiring. I've taken part in several bootcamps, 
+                                    ranging from <span>full-stack development</span> to <span>data science with Python</span> and <span>machine learning</span>. At the moment, 
+                                    I'm focusing on <span><b>Front-End</b></span> tools. Although it's a relatively new area for me, I feel excited and intend to consolidate my career as a <span>Fullstack 
+                                    developer</span>.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="text-about">
+                                <p>System Development Student<br> Work at Celepar
+                                </p>
+                                <div class="socialslinks">
+                                    <a href="http://instagram.com/istnss" target="_blank"><img src="img/icon-instagram.svg" class="img-fluid" alt="Ícone instagram" id="iconNightInstagram" ></a>
+                                    <a href="http://github.com/istnss"target="_blank"><img src="img/githubDark.png" class="img-fluid" alt="Ícone Github" id="iconNightGithub"></a>
+                                    <a href="http://linkedin.com/in/isa-bela" target="_blank"><img src="img/icon-linkedin.svg" class="img-fluid" alt="Ícone Linkedin" id="iconNightLinkedin"></a>
+                                </div>
+                                <button id="button-download" onclick="downloadResume()" >Download Resume</button>
+                                <a href="mailto:owisa@outlook.com" class="button-about">Send E-mail</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+              </div>
+        </section>
+          <section class="container-fluid">
+            <div class="tech-text">
+                <h4>My progress </h4>
             </div>
-            <div class="techtitle">
-                <a href="projects.html">Projects - click here</a>
+            <div class="techstack-about">
+                <div class="showMore">
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="img-fluid" alt="Icone Html"></p>
+                    <div class="tagTech">
+                        <p>HTML
+                            <div class="bar">
+                                <div class="line" data-width="80"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="img-fluid" alt="Icone Css"></p>
+                    <div class="tagTech">
+                        <p>CSS:
+                            <div class="bar">
+                                <div class="line" data-width="75"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" class="img-fluid"  alt="Icone javascript"></p>
+                    <div class="tagTech">
+                        <p>JS:
+                            <div class="bar">
+                                <div class="line" data-width="45"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="img-fluid"  alt="Icone typescript"></p>
+                    <div class="tagTech">
+                        <p>TS
+                            <div class="bar">
+                                <div class="line" data-width="25"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="img-fluid" alt="Icone bootstrap"></p>
+                    <div class="tagTech">
+                        <p>Bootstrap
+                            <div class="bar">
+                                <div class="line" data-width="75"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="img-fluid" alt="Icone figma"></p>
+                    <div class="tagTech">
+                        <p>Figma
+                            <div class="bar">
+                                <div class="line" data-width="25"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="img-fluid" alt="Icone linux"></p>
+                    <div class="tagTech">
+                        <p>Linux
+                            <div class="bar">
+                                <div class="line" data-width="45"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="img-fluid" alt="Icone Python"></p>
+                    <div class="tagTech">
+                        <p>Python
+                            <div class="bar">
+                                <div class="line" data-width="25"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                    <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="img-fluid" alt="Icone Java"></p>
+                    <div class="tagTech">
+                        <p>Java
+                            <div class="bar">
+                                <div class="line" data-width="25"></div>
+                            </div>
+                            In progress
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="gallery-projects">
