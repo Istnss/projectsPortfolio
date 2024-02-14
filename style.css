@@ -13,14 +13,14 @@ body.darkmode .p-about
     color: #f5f5f5;
 }
 body.darkmode .button, 
-body.darkmode .techtitle a, 
+body.darkmode, 
 body.darkmode #button-download,
 body.darkmode .button-about
 {
     background: #8e29af;
 }
 body.darkmode .button:hover, 
-body.darkmode .techtitle a:hover, 
+body.darkmode, 
 body.darkmode #button-download:hover,
 body.darkmode .button-about:hover
 {
@@ -57,12 +57,9 @@ input[type="checkbox"]{
     display: none;
 }
 .image{
-    max-width: 9em;
+    max-width: 5em;
     margin-left: 20px;
 }
-.image a{
-    color: #292936;
-    font-size: 1.5em;}
 main{
     background-image: url("img/background.png");
     background-size:cover;
@@ -86,6 +83,16 @@ main{
 span{
     color: #9e199e;
 }
+.button, .button-projects{
+    background: linear-gradient(90deg, #8219a5, #db12c9) ;
+    color: aliceblue;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 0.5em;
+    font-size: 1.3em;
+}
 .button{
     background: linear-gradient(90deg, #8219a5, #db12c9) ;
     color: aliceblue;
@@ -104,45 +111,6 @@ span{
 .links{
     width:4em;
     margin-right: 0.5px;
-}
-.tech{
-    padding: 4em 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.techtitle a{
-    font-size: 1.5em;
-    font-weight: 400;
-    margin-left: 1.5em;
-    background: linear-gradient(90deg, #541968, #db12c9) ;
-    border-radius: 8px;
-    color: aliceblue;
-    padding: 16px 32px;
-    text-decoration: none;
-}
-.techtitle a:hover{
-    background: #d554f5;
-    color: aliceblue;
-    font-weight: 800;
-}
-
-.techstack{
-    list-style: none;
-    padding: 0.5em;
-}
-.techstack img{
-    margin-left: 1em;
-    padding: 0.5em;
-    height: 6.5em;
-    width: 6.5em;
-    background-color: #afaffd;
-    opacity: 0.5 ;
-    border-radius: 50%;
-    object-fit:cover ;
-}
-.techstack img:hover, .techstack-about img:hover{
-    opacity: 1;
 }
 .gallery {
     display:flex ;
@@ -163,7 +131,6 @@ span{
 .img-gallery:hover img {
     transform: scale(1.1) ;
 }
-/**/
 .about-me {
     display: flex;
     justify-content: center; 
@@ -177,7 +144,7 @@ span{
     align-items: center;
     margin-top: 3em;
 }
-.techstack-about, .showMore{
+.showMore{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +153,7 @@ span{
     font-size: 1em;
     cursor: pointer;
 }
-.techstack-about img, .showMore img{
+.showMore img{
     margin: 3em 0 4em 1em;
     padding: 0.5em;
     height: 5.5em;
@@ -199,7 +166,6 @@ span{
 .tagTech {
     display: none;
 }
-
 .tagTech.ativa {
     display: block;
     padding: 1em;
@@ -211,22 +177,19 @@ span{
   }
 .line {
     height: 20px;
+    background-color:#d554f5 ;
 }
 .line[data-width="80"] {
-    background-color:#541968 ;
     width: 80%;
 }
 .line[data-width="75"] {
-    background-color:#d554f5 ;
     width: 75%;
 }
 .line[data-width="45"] {
-    background-color:#541968 ;
     width: 45%;
 } 
 .line[data-width="25"] {
     width: 25%;
-    background-color:#d554f5 ;
 }
 .button-about, #button-download{
     background-color: #c870df  ;
@@ -252,72 +215,6 @@ span{
     width: 3em;
     margin-left: 2em;
     margin-bottom: 2em;
-}
-
-.carousel-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.carousel-projects {
-    display: block;
-    overflow: hidden;
-    object-fit: cover;
-}
-.carousel-projects img {
-    width: 100%;
-    height: 50vh;
-}
-.hidden {
-    display: none;
-}
-.button-carousel{
-    margin-top: 1em;
-    padding: 0.5em 3em;
-    border-radius: 10px;
-    border: none;
-    background-color: #c6c6f3;
-}
-.button-carousel:hover{
-    background-color: #9696bd;
-}
-.form-contact form fieldset {
-    border-radius: 10px;
-    border: 2px solid #541968;
-    padding: 2em;
-    margin: 2em;
-}
-.field {
-    margin: 1em;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.field label {
-    width: 100%;
-    margin-bottom: 0.5em;
-}
-.field input, .field textarea {
-    flex: 1;
-    border-radius: 10px;
-    border: 2px solid #fcf8f8;
-    padding: 0.5em;
-    margin-right: 0.5em;
-}
-.field input[type="submit"] {
-    background-color: #c870df;
-    color: white;
-    padding: 1em 1.5em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.field input[type="submit"]:hover {
-    background-color: #541968;
-}
-#subject, .field textarea {
-    width: 100%;
-    margin-right: 0;
 }
 .project-page{
     margin: 2.5em;
@@ -384,9 +281,6 @@ span{
         padding: 8px 16px;
         font-size: 2em;
     }
-    .techstack{
-        padding: 2em;
-    }
     .imglaptop{
         margin-top: 5em;
     }
@@ -397,12 +291,6 @@ span{
         font-size: 2em;
         font-weight: 400;
         padding: 16px 32px;
-    }
-    .techstack img{
-        margin-left: 1em;
-        padding: 1em;
-        height: 10em;
-        width: 10em;
     }
 }
 @media(max-width: 1440px){
@@ -423,11 +311,9 @@ span{
     }
     #first-column h2{
         font-size: 2em;
-
     }
     .links{
         width:2em;
-
     }
     .button{
         padding: 8px 16px;
@@ -460,14 +346,6 @@ span{
     .tagTech.ativa{
         display: none;
     }
-    .techtitle a{
-        margin-left: 2em;
-        font-size: 1em;
-        padding: 6px 10px;
-    }
-    hr{
-        display: none;
-    } 
 }
 @media(max-width: 780px){
     .image{
@@ -489,32 +367,14 @@ span{
         padding: 6px 10px;
         font-size: 1em;
     }
-    .tech{
-        display: block;
-    }
-    .techstack{
-        display: flex;
-        padding-left: 3em;
-    }
-    .techtitle{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 1em;
-        font-size: 1em;
-    }
     .techstack-about{
         display: flex;
-        padding-right: 1em;
-    }
-    .carousel-project{
-        display: none;
+        padding-right: 0.5em;
     }
     #button-download{
         display: block;
         margin-left: 5em;
         margin-bottom: 1.5em;
-
     }
 }
 @media(max-width:480px){
@@ -548,20 +408,6 @@ span{
     }
     .tech{
         display: inline;
-    }
-    .techstack{
-        padding-left: 0.5em;
-    }
-    .techstack img{
-        width: 5em;
-        height: 5em;
-        margin-left: 0;
-    }
-    .techtitle{
-        margin-right: 2em;
-    }
-    .techtitle a{
-        font-size: 1em;
     }
     .about-me{
         display: block;
@@ -621,13 +467,4 @@ span{
         display: block;
         margin-left: 4.5em;
     }
-    .form-contact form fieldset{
-        margin: 0;
-        padding: 1em;
-    }
-    .field{
-        margin: 0;
-        margin-bottom: 1em;
-    }
-    
 }
