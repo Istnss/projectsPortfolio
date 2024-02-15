@@ -1,4 +1,3 @@
-/*Page about me - .techstack */
 document.addEventListener('DOMContentLoaded', function () {
     var showMoreContainer = document.querySelector('.showMore');
 
@@ -9,47 +8,61 @@ document.addEventListener('DOMContentLoaded', function () {
             var tagTech = showMoreTrigger.nextElementSibling;
             var lines = tagTech.querySelectorAll('.line');
 
-            // Adiciona ou remove a classe 'ativa' para mostrar ou ocultar o conteúdo
             tagTech.classList.toggle('ativa');
 
         }
     });
-
-    // Função auxiliar para encontrar o ancestral com uma classe específica
     function findAncestor(element, className) {
         while ((element = element.parentElement) && !element.classList.contains(className));
         return element;
     }
 });
+var currentSlide = [0, 0]; 
+var carouselSlides = document.querySelectorAll('.carousel-projects .slide');
+var prevButtons = document.querySelectorAll('.carousel-projects .prev-button');
+var nextButtons = document.querySelectorAll('.carousel-projects .next-button');
 
-/*Slide */
-var currentSlide = 0;
-var slides = document.querySelectorAll('.carousel-projects .slide img');
-
-function showSlide(index) {
+function showSlide(index, carouselIndex) {
+    var slides = carouselSlides[carouselIndex].querySelectorAll('img');
     for (var i = 0; i < slides.length; i++) {
         slides[i].classList.add('hidden');
     }
     slides[index].classList.remove('hidden');
 }
-
-function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
+function nextSlide(carouselIndex) {
+    currentSlide[carouselIndex]++;
+    var slidesLength = carouselSlides[carouselIndex].querySelectorAll('img').length;
+    if (currentSlide[carouselIndex] >= slidesLength) {
+        currentSlide[carouselIndex] = 0;
     }
-    showSlide(currentSlide);
+    showSlide(currentSlide[carouselIndex], carouselIndex);
 }
-
-function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
+function prevSlide(carouselIndex) {
+    currentSlide[carouselIndex]--;
+    var slidesLength = carouselSlides[carouselIndex].querySelectorAll('img').length;
+    if (currentSlide[carouselIndex] < 0) {
+        currentSlide[carouselIndex] = slidesLength - 1;
     }
-    showSlide(currentSlide);
+    showSlide(currentSlide[carouselIndex], carouselIndex);
 }
-
-/*Btn prev n next */
+document.addEventListener('DOMContentLoaded', function () {
+    for (var i = 0; i < prevButtons.length; i++) {
+        prevButtons[i].addEventListener('click', function (event) {
+            var carouselIndex = Array.prototype.indexOf.call(prevButtons, event.target);
+            prevSlide(carouselIndex);
+        });
+    }
+    for (var i = 0; i < nextButtons.length; i++) {
+        nextButtons[i].addEventListener('click', function (event) {
+            var carouselIndex = Array.prototype.indexOf.call(nextButtons, event.target);
+            nextSlide(carouselIndex);
+        });
+    }
+    for (var i = 0; i < carouselSlides.length; i++) {
+        showSlide(currentSlide[i], i);
+    }
+});
+/**/
 document.addEventListener('DOMContentLoaded', function () {
     showSlide(currentSlide);
 
@@ -64,17 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
         nextSlide();
     });
 });
-
-/*Dark Mode*/ 
+/**/ 
 function adjustElementsForDarkMode(isDarkMode) {
-    // Array de objetos contendo os IDs dos elementos e as respectivas imagens para o modo claro e escuro
     var elements = [
         { id: "iconNightLinkedin", lightSrc: "./img/linkedinLight.png", darkSrc: "./img/linkedinDark.svg" },
         { id: "iconNightGithub", lightSrc: "./img/githubLight.png", darkSrc: "./img/githubDark.png" },
         { id: "imgCat", lightSrc: "./img/iconHome.png", darkSrc: "img/catHome.gif" },
         { id: "nightmode", lightSrc: "./img/iconlamp.png", darkSrc: "./img/iconmoon.svg" },
         { id: "iconNightInstagram", lightSrc:  "./img/iconInstagramLight.png", darkSrc:"img/icon-instagram.svg" }
-        // Adicione mais objetos conforme necessário
     ];
 
     elements.forEach(function (element) {
@@ -85,55 +95,40 @@ function adjustElementsForDarkMode(isDarkMode) {
         }
     });
 }
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Obtém a referência para o botão de alternância do modo noturno
     var darkModeToggle = document.getElementById('dark-mode-toggle');
 
-    // Obtém a referência para o elemento <body> do documento
     var body = document.body;
 
-    // Verifica se há uma preferência de modo noturno armazenada no localStorage
     var isDarkModeEnabled = localStorage.getItem('darkModeEnabled');
 
-    // Se houver uma preferência de modo noturno armazenada, aplique-a
     if (isDarkModeEnabled === 'true') {
-        body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
-        darkModeToggle.checked = true; // Marca o botão de alternância
+        body.classList.add('darkmode');
+        darkModeToggle.checked = true; 
         adjustElementsForDarkMode(true);
     }
-
-    // Adiciona um ouvinte de evento ao botão de alternância
     darkModeToggle.addEventListener('change', function () {
-        // Atualiza a preferência no localStorage com base no estado do botão de alternância
         localStorage.setItem('darkModeEnabled', darkModeToggle.checked);
-
-        // Atualiza a classe 'darkmode' no corpo conforme necessário
         if (darkModeToggle.checked) {
-            body.classList.add('darkmode'); // Adiciona a classe 'darkmode' ao corpo
+            body.classList.add('darkmode'); 
             adjustElementsForDarkMode(true);
         } else {
-            body.classList.remove('darkmode'); // Remove a classe 'darkmode' do corpo
+            body.classList.remove('darkmode'); 
             adjustElementsForDarkMode(false);
         }
     });
 });
-
-/* Botao Download*/
+/**/
 function downloadResume(){
     var downloadLink = document.createElement('a');
-    downloadLink.href = "http://drive.usercontent.google.com/uc?id=17mP-AjRpy0-lkEdJIbIgTmCb5SsXn5Kt&export=downloadLink";
+    downloadLink.href = "https://drive.usercontent.google.com/uc?id=17mP-AjRpy0-lkEdJIbIgTmCb5SsXn5Kt&export=downloadLink";
     downloadLink.download = "resume_Isabela";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
 }
-    
-   
-
-/*Pagina projetos */
+/**/
 var elementDescription = document.querySelectorAll('.project-page');
-
 elementDescription.forEach(function(project){
     project.addEventListener('mouseover', function(){
         project.querySelector('description').computedStyleMap.visibility = 'visible';
@@ -142,4 +137,3 @@ elementDescription.forEach(function(project){
         project.querySelector('description').computedStyleMap.visibility = 'hidden';
     });
 });
-
