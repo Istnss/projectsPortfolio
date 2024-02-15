@@ -117,20 +117,6 @@ span{
     flex-wrap: wrap ;
     justify-content: center;
 }
-.img-gallery {
-    position: relative;
-    margin: 3em 2em;
-    width: calc(22% - 20px);
-    overflow: hidden;
-}
-.img-gallery img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s;
-}
-.img-gallery:hover img {
-    transform: scale(1.1) ;
-}
 .about-me {
     display: flex;
     justify-content: center; 
@@ -216,19 +202,18 @@ span{
     margin-left: 2em;
     margin-bottom: 2em;
 }
-.project-page{
-    margin: 2.5em;
-    padding-top: 2em;
-    padding-bottom: 22rem;
-    width: 100%;
-    height: 45vh;
+.container-projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 2em;
+    margin: 1em;
 }
-.img-project-page{
-    display: block;
-    padding: 0;
-    margin: 0;
-    max-width: 100%;
-    height: auto;
+#h2project{
+    font-size: 2em;
+    text-align: center;
+}
+.project-page{
+    text-align: center;
 }
 .btn-project{
     background: #9c9cd8;
@@ -247,14 +232,39 @@ span{
     display: inline;
     background: #9c9cd8;
     color: #2c0d36;
-    padding: 10px 90px;
-    margin-left: 0.5em;
-    margin-top: 2em;
+    padding: 1em 8em;
     visibility: hidden;
     transition: visibility 0.3s;
 }
 .project-page:hover .description-project{
     visibility: visible;
+}
+.carousel-project {
+    display: grid;
+    padding: 2em;
+}
+.carousel-projects {
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+}
+.carousel-projects img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 2em;
+}
+.hidden {
+    display: none;
+}
+.button-carousel{
+    margin-top: 1em;
+    padding: 0.5em 3em;
+    border-radius: 10px;
+    border: none;
+    background-color: #c6c6f3;
+}
+.button-carousel:hover{
+    background-color: #9696bd;
 }
 #copyright{
     background-color: #263138;
@@ -291,6 +301,17 @@ span{
         font-size: 2em;
         font-weight: 400;
         padding: 16px 32px;
+    }
+    .container-projects{
+        gap: 0;
+    }
+    .img25{
+        min-width: 40em;
+        height: auto;
+        padding: 0;
+    }
+    .description-project{
+        font-size: 1.5em;
     }
 }
 @media(max-width: 1440px){
@@ -346,6 +367,9 @@ span{
     .tagTech.ativa{
         display: none;
     }
+    .container-projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 @media(max-width: 780px){
     .image{
@@ -367,14 +391,13 @@ span{
         padding: 6px 10px;
         font-size: 1em;
     }
-    .techstack-about{
-        display: flex;
-        padding-right: 0.5em;
-    }
     #button-download{
         display: block;
         margin-left: 5em;
         margin-bottom: 1.5em;
+    }
+    .container-projects{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media(max-width:480px){
@@ -412,9 +435,18 @@ span{
     .about-me{
         display: block;
     }
-    .techstack-about{
-        display: block;
+    .showMore{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        padding-left: 2em;
     }
+    .techstack-about img{
+        margin: 2em 0.2em;
+        padding: 0.3em;
+        height: 4em;
+        width: 4em;
+    }  
     .socialslinks img{
         width: 3em;
         margin-left: 1rem;
@@ -424,16 +456,6 @@ span{
     #button-download{
         display: block;
         margin-left: 6em;
-    }
-    .techstack-about img{
-        margin: 2em 0.2em;
-        padding: 0.3em;
-        height: 4em;
-        width: 4em;
-        background-color: #9d9ddb;
-        opacity: 0.6 ;
-        border-radius: 50%;
-        object-fit:cover ;
     }
     #gallery-projects{
         display: none;
@@ -465,6 +487,15 @@ span{
     }
     #button-download{
         display: block;
-        margin-left: 4.5em;
+        margin: 3em;
+    }
+   .img25, .project-page{
+        width: 80vw;
+    }
+    .description-project{
+        display: none
     }
 }
+
+
+

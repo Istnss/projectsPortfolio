@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
-    <title>Portfólio | Isabela </title>
+    <title>Portfolio | Isabela </title>
     <meta name="description" content="Portifolio Frontend">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -20,7 +20,7 @@
                 <div class="image">
                     <a class="navbar-brand" href="index.html">
                         <img src="img/catHome.gif" alt="Imagem de um gato" loading="lazy" class="img-fluid">
-                    <span class="texthome"> Portfólio | Isabela</span></a>
+                    <span class="texthome"> Portfolio | Isabela</span></a>
                 </div>
                 <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -185,21 +185,34 @@
         </section>
         <section id="gallery-projects">
             <div class="gallery">
-                <div class="img-gallery">
-                    <a href="projects.html"><img src="img/sem_foto.png" alt="" ></a>
+                <div class="carousel-project text-center">
+                    <div class="carousel-projects">
+                        <div class="slide">
+                            <a href="projects.html"><img src="img/sem_foto.png" alt=""></a>
+                            <a href="projects.html"><img src="img/sem_foto.png" alt="" class="hidden"></a>
+                            <a href="projects.html"><img src="img/imagelaptop.png" alt="" class="hidden"></a>
+                        </div>
+                        <button class="button-carousel prev-button">Prev</button>
+                        <button class="button-carousel next-button">Next</button>                        
+                    </div>
                 </div>
-                <div class="img-gallery">
-                    <a href="projects.html"><img src="img/sem_foto.png" alt="Descrição da imagem" ></a>
-                </div>
-                <div class="img-gallery">
-                    <a href="projects.html"><img src="img/sem_foto.png" alt="Descrição da imagem" ></a>
-                </div>
+                <div class="carousel-project text-center">
+                    <div class="carousel-projects">
+                        <div class="slide">
+                            <a href="projects.html"><img src="img/sem_foto.png" alt=""></a>
+                            <a href="projects.html"><img src="img/sem_foto.png" alt="" class="hidden"></a>
+                            <a href="projects.html"><img src="img/catHome.gif" alt="" class="hidden"></a>
+                        </div>
+                        <button class="button-carousel prev-button">Prev</button>
+                        <button class="button-carousel next-button">Next</button>                        
+                    </div>
+                </div>  
             </div>  
         </section>
     </main>
     <footer class="mt-auto">
         <div id="copyright">
-            Desenvolvido por <a href="http://github.com/istnss" target="_blank">@istnss</a>&#9829
+            Developed by <a href="http://github.com/istnss" target="_blank">@istnss</a> &#9829
         </div>
     </footer>
     <script src="index.js"></script>
