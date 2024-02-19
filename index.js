@@ -127,13 +127,13 @@ function downloadResume(){
     downloadLink.click();
     document.body.removeChild(downloadLink);
 }
-/**/
-var elementDescription = document.querySelectorAll('.project-page');
-elementDescription.forEach(function(project){
-    project.addEventListener('mouseover', function(){
-        project.querySelector('description').computedStyleMap.visibility = 'visible';
+let elementoDescricao = document.querySelectorAll('.imageProject');
+
+elementoDescricao.forEach(function(elemento){
+    elemento.addEventListener('mouseover', function(){
+        elemento.querySelector('description-project').computedStyleMap.visibility = 'visible';
     });
-    project.addEventListener('mouseout', function(){
-        project.querySelector('description').computedStyleMap.visibility = 'hidden';
+    elemento.addEventListener('mouseout', function(){
+        elemento.querySelector('description-project').computedStyleMap.visibility = 'hidden';
     });
 });
