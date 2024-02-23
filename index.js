@@ -1,22 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var showMoreContainer = document.querySelector('.showMore');
+    var showMoreContainers = document.querySelectorAll('.showMore');
 
-    showMoreContainer.addEventListener('click', function (event) {
-        var showMoreTrigger = findAncestor(event.target, 'showMoreTrigger');
+    showMoreContainers.forEach(function (container) {
+        container.addEventListener('click', function (event) {
+            var showMoreTrigger = findAncestor(event.target, 'showMoreTrigger');
 
-        if (showMoreTrigger) {
-            var tagTech = showMoreTrigger.nextElementSibling;
-            var lines = tagTech.querySelectorAll('.line');
+            if (showMoreTrigger) {
+                var tagTech = showMoreTrigger.nextElementSibling;
+                var lines = tagTech.querySelectorAll('.line');
 
-            tagTech.classList.toggle('ativa');
+                tagTech.classList.toggle('ativa');
 
-        }
+                closeOtherContainers(container);
+            }
+        });
     });
+
     function findAncestor(element, className) {
         while ((element = element.parentElement) && !element.classList.contains(className));
         return element;
     }
+
+    function closeOtherContainers(clickedContainer) {
+        showMoreContainers.forEach(function (container) {
+            if (container !== clickedContainer) {
+                var tagTech = container.querySelector('.tagTech');
+                if (tagTech.classList.contains('ativa')) {
+                    tagTech.classList.remove('ativa');
+                }
+            }
+        });
+    }
 });
+
+
 var currentSlide = [0, 0]; 
 var carouselSlides = document.querySelectorAll('.carousel-projects .slide');
 var prevButtons = document.querySelectorAll('.carousel-projects .prev-button');
@@ -137,3 +154,4 @@ elementoDescricao.forEach(function(elemento){
         elemento.querySelector('description-project').computedStyleMap.visibility = 'hidden';
     });
 });
+
