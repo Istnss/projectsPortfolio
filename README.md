@@ -6,11 +6,9 @@ Bem-vindo ao meu portfólio de desenvolvimento Front End! Este repositório cont
 
 1. **Tecnologias Utilizadas:**
    - HTML5, CSS3, JavaScript
-   - Frameworks: Bootstrap
    - Ferramentas: Git, VSCode
 
 2. **Processo de Trabalho:**
-   - Adoto a abordagem Mobile-First, começando pelo design e desenvolvimento para dispositivos móveis. Isso garante uma base sólida para a experiência do usuário em telas menores.
    - Implemento media queries para estabelecer breakpoints, ajustando o layout e os estilos conforme necessário em diferentes larguras de tela. Isso garante uma transição suave entre os diferentes dispositivos.
    - Realizo testes extensivos em uma variedade de dispositivos e navegadores para garantir que o site seja funcional e visualmente atraente em todos os cenários.
 
@@ -20,6 +18,6 @@ Bem-vindo ao meu portfólio de desenvolvimento Front End! Este repositório cont
    - Portfólio [Portfólio Online](https://portfolio-istnss.vercel.app/)
 
 4. **Atualizações:**
-   - Última atualização: 01.02.2024
+   - Última atualização: 23.02.2024
 
 Obrigada por visitar!
