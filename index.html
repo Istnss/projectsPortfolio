@@ -3,219 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
     <title>Portfolio | Isabela </title>
     <meta name="description" content="Portifolio Frontend">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body>
     <header>
-        <nav class="navbar navbar-expand-sm">
-            <div class="container-fluid">
-                <div class="image">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/catHome.gif" alt="Imagem de um gato" loading="lazy" class="img-fluid">
-                    <span class="texthome"> Portfolio | Isabela</span></a>
-                </div>
-                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>                
-                    </ul>
-                    <div class="buttonDarkMode">
-                        <ul>
-                            <li id="darkmode">
-                                <input type="checkbox" id="dark-mode-toggle">
-                                <label for="dark-mode-toggle"><img src="img/iconmoon.svg" alt="Ícone do modo escuro" id="nightmode" width="20px" height="auto" style="cursor: pointer"></label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <nav>
+            <div class="navL">
+                <img src="img/catHome.gif" alt="Imagem de um gato" loading="lazy" id="imgCat">
+                <p>Portfolio | Isabela</p>
             </div>
-        </nav>
+            <div class="navR">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li id="darkmode">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <label for="dark-mode-toggle"><img src="img/iconmoon.svg" alt="Ícone do modo escuro" id="nightmode" width="20px" height="auto" style="cursor: pointer"></label>
+                    </li>
+                </ul>
+            </div>
+        </nav>        
     </header>
     <main>
-        <div class="container main-container">              
-            <div class="row justify-content-evenly">
-              <div class="col" id="first-column">
-                <h1>Full Stack<br> Developer<span>.</span></h1><br><br>
-                <h2>Hello<span>,</span> I'm Isabela<span>.</span></h2><br><br>
-                <div class="contact-container">
-                    <a class="button" href="mailto:owisa@outlook.com">Send E-mail</a>
-                    <a class="button" href="projects.html">Projects</a>
-                </div>
-               </div>
-              <div class="col">
-                <img src="img/imagelaptop.png" loading="lazy" class="img-fluid imglaptop" alt="imagem laptop" height="auto">
-              </div>
+        <section class="intro">
+            <div>
+                <h1>Entry Level<br> Developer<span>.</span></h1><br>
+                <h2>Hello<span>,</span> I'm Isabela<span>.</span></h2><br>
+                <a href="mailto:owisa@outlook.com">Send E-mail</a>
+                <a href="projects.html">Projects</a>
             </div>
-          </div>
-          <hr>
-          <section>
-            <div class="container text-center">
-                <div class="row align-items-start">
-                    <div class="about-me">
-                        <div class="col">
-                            <div class="p-about">
-                                <p>I'm taking my first steps in technology and I'm excited about the new knowledge I'm acquiring. I've taken part in several bootcamps, 
-                                    ranging from <span>full-stack development</span> to <span>data science with Python</span> and <span>machine learning</span>. At the moment, 
-                                    I'm focusing on <span><b>Front-End</b></span> tools. Although it's a relatively new area for me, I feel excited and intend to consolidate my career as a <span>Fullstack 
-                                    developer</span>.</p>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="text-about">
-                                <p>System Development Student<br> Work at Celepar
-                                </p>
-                                <div class="socialslinks">
-                                    <a href="http://instagram.com/istnss" target="_blank"><img src="img/icon-instagram.svg" class="img-fluid" alt="Ícone instagram" id="iconNightInstagram" ></a>
-                                    <a href="http://github.com/istnss"target="_blank"><img src="img/githubDark.png" class="img-fluid" alt="Ícone Github" id="iconNightGithub"></a>
-                                    <a href="http://linkedin.com/in/isa-bela" target="_blank"><img src="img/icon-linkedin.svg" class="img-fluid" alt="Ícone Linkedin" id="iconNightLinkedin"></a>
-                                </div>
-                                <button id="button-download" onclick="downloadResume()" >Download Resume</button>
-                                <a href="mailto:owisa@outlook.com" class="button-about">Send E-mail</a>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-              </div>
+            <div>
+                <img src="img/imagelaptop.png" loading="lazy" alt="imagem laptop">
+            </div>
         </section>
-          <section class="container-fluid">
-            <div class="tech-text">
-                <h4>My progress </h4>
+        <hr>
+        <section class="about">
+            <div class="aboutTxt">
+                <p>I'm taking my first steps in technology and I'm excited about the new knowledge I'm acquiring. I've taken part in several bootcamps, 
+                    ranging from <span>full-stack development</span> to <span>data science with Python</span> and <span>machine learning</span>. At the moment, 
+                    I'm focusing on <span><b>Front-End</b></span> tools. Although it's a relatively new area for me, I feel excited and intend to consolidate my career as a <span>Fullstack 
+                    developer</span>.</p>
             </div>
-            <div class="techstack-about">
+            <div>
+                <p>System Development Student<br> Work at Celepar<br><br>
+                <div class="socialslinks">
+                    <a href="http://instagram.com/istnss" target="_blank"><img src="img/icon-instagram.svg" alt="Ícone instagram" id="iconNightInstagram" ></a>
+                    <a href="http://github.com/istnss"target="_blank"><img src="img/githubDark.png" alt="Ícone Github" id="iconNightGithub"></a>
+                    <a href="http://linkedin.com/in/isa-bela" target="_blank"><img src="img/icon-linkedin.svg" alt="Ícone Linkedin" id="iconNightLinkedin"></a>
+                </div>
+                <button id="button-download" onclick="downloadResume()" >Download Resume</button>
+                <a href="mailto:owisa@outlook.com" class="linkAbout">Send E-mail</a>
+            </div>
+        </section>
+        <hr>
+        <section class="Techs">
+            <h3>Tools</h3>
+            <div class="tech">
                 <div class="showMore">
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="img-fluid" alt="Icone Html"></p>
                     <div class="tagTech">
                         <p>HTML
-                            <div class="bar">
-                                <div class="line" data-width="80"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="80"></div>
+                        </div>
+                         In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="img-fluid" alt="Icone Css"></p>
                     <div class="tagTech">
                         <p>CSS:
-                            <div class="bar">
-                                <div class="line" data-width="75"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="75"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" class="img-fluid"  alt="Icone javascript"></p>
                     <div class="tagTech">
                         <p>JS:
-                            <div class="bar">
-                                <div class="line" data-width="45"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="45"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" class="img-fluid"  alt="Icone typescript"></p>
                     <div class="tagTech">
                         <p>TS
-                            <div class="bar">
-                                <div class="line" data-width="25"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="25"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="img-fluid" alt="Icone bootstrap"></p>
                     <div class="tagTech">
                         <p>Bootstrap
-                            <div class="bar">
-                                <div class="line" data-width="75"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="75"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" class="img-fluid" alt="Icone figma"></p>
                     <div class="tagTech">
                         <p>Figma
-                            <div class="bar">
-                                <div class="line" data-width="25"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="25"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="img-fluid" alt="Icone linux"></p>
                     <div class="tagTech">
                         <p>Linux
-                            <div class="bar">
-                                <div class="line" data-width="45"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="45"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="img-fluid" alt="Icone Python"></p>
                     <div class="tagTech">
                         <p>Python
-                            <div class="bar">
-                                <div class="line" data-width="25"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="25"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                     <p class="showMoreTrigger"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="img-fluid" alt="Icone Java"></p>
                     <div class="tagTech">
                         <p>Java
-                            <div class="bar">
-                                <div class="line" data-width="25"></div>
-                            </div>
-                            In progress
+                        <div class="bar">
+                            <div class="line" data-width="25"></div>
+                        </div>
+                        In progress
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="gallery-projects">
-            <div class="gallery">
-                <div class="carousel-project text-center">
-                    <div class="carousel-projects">
-                        <div class="slide">
-                            <a href="projects.html"><img src="img/capaXfiles.png" alt=""></a>
-                            <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
-                            <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
-                        </div>
-                        <button class="button-carousel prev-button">Prev</button>
-                        <button class="button-carousel next-button">Next</button>                        
-                    </div>
+        <section class="gallery">
+            <div class="carousel-projects">
+                <div class="slide">
+                    <a href="projects.html"><img src="img/capaXfiles.png" alt=""></a>
+                    <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
+                    <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
                 </div>
-                <div class="carousel-project text-center">
-                    <div class="carousel-projects">
-                        <div class="slide">
-                            <a href="projects.html"><img src="img/no_photo.png" alt=""></a>
-                            <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
-                            <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
-                        </div>
-                        <button class="button-carousel prev-button">Prev</button>
-                        <button class="button-carousel next-button">Next</button>                        
-                    </div>
-                </div> 
-            </div>  
+                <button class="button-carousel prev-button">Prev</button>
+                <button class="button-carousel next-button">Next</button>                        
+            </div>
+            </div>
+            <div class="carousel-projects">
+                <div class="slide">
+                    <a href="projects.html"><img src="img/no_photo.png" alt=""></a>
+                    <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
+                    <a href="projects.html"><img src="img/no_photo.png" alt="" class="hidden"></a>
+                </div>
+                <button class="button-carousel prev-button">Prev</button>
+                <button class="button-carousel next-button">Next</button>                        
+            </div>
         </section>
     </main>
-    <footer class="mt-auto">
+    <footer>
         <div id="copyright">
             Developed by <a href="http://github.com/istnss" target="_blank">@istnss</a> &#9829
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="index-min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
