@@ -283,7 +283,7 @@ span{
     .intro h2{
         font-size: 1.5em;
     }
-    .intro a, .linkAbout, #button-download{
+    .intro a, .linkAbout{
         font-size: 0.8em;
     }
     .aboutTxt{
@@ -364,15 +364,15 @@ span{
     .linkAbout{
         font-size: 0.8em;
     }
-    #button-download{
-        display: block;
-        margin-left: 4.7em;
-    }
     .carousel-projects{
         margin-top: 2em;
     }
     .carousel-projects img{
         width: 250px;
         height: 250px;
+    }
+    #button-download{
+        display: block;
+        margin: 1em auto;
     }
 }
