@@ -20,7 +20,8 @@ body.darkmode .button-carousel:hover{
 body.darkmode #button-download:hover,
 body.darkmode .button-about:hover,
 body.darkmode .intro a:hover, 
-body.darkmode .about a:hover{
+body.darkmode .about a:hover, 
+body.darkmode .imageProject a{
     background: #9c9cd8;
     color: #292936;
 }
