@@ -223,7 +223,8 @@ span{
     background-color: #fff;
 }
 #h2project{
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: 400;
     text-align: center;
     padding: 2em;
 }
@@ -301,6 +302,9 @@ span{
         width: 25em;
         height: 25em;
     }
+    .buttonProjects a{
+        padding: 0.8em;
+    }
     #copyright{
         font-size: 0.7em;
     }
@@ -323,6 +327,9 @@ span{
     }
     .button-carousel{
         font-size: 0.7em;
+    }
+    .project-page{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 540px){
@@ -349,6 +356,14 @@ span{
     }
     .gallery{
         display: block;
+    }
+    .socialslinks img{
+        margin-left: 0;
+        margin-right: 2em;
+        padding-left: 2em;
+    }
+    .project-page{
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width:375px){
